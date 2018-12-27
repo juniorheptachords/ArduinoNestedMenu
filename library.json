@@ -1,0 +1,17 @@
+{
+  "name": "ArduinoNestedMenu",
+  "keywords": "menu, nested, lcd, oled",
+  "description": "A library to create nested menus",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juniorheptachords/ArduinoNestedMenu.git"
+  },
+  "version": "1.0.0",
+  "authors": {
+    "name": "Christophe Jourdan",
+    "url": "https://www.christophejourdan.com"
+  },
+  "frameworks": "arduino",
+  "platforms": "*"
+}
