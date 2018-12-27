@@ -13,8 +13,6 @@ Currently tested only on Teensy but should work with any Arduino or C++ hardware
 
 ## Quickstart
 
-### Deserialization
-
 Here is an example of a 3 level menu.
 
 ```c++
@@ -46,7 +44,43 @@ MenuGroup::Item<MenuGroup> mainItems[3] = {
   {"Bedroom", {}, &bedroomMenuGroup},
   {"Livingroom", {}, &livingroomMenuGroup},
 };
+       
+MenuGroup mainMenuGroup(mainItems);
+                                                  
+Menu<MenuGroup> mainMenu(&mainMenuGroup);
 ```
+
+The logic using this menu to navigate is not part of the library and is intended to be in the project itself because it all depends on the type of inputs and outputs used (rotary encoder, potentiometer, buttons, oled display, lcd display, serial logging, ...).
+
+## How to use
+
+Here are the methods provided by the Menu object.
+
+### getCurrentIndex()
+Get the current item's index.
+
+### getPreviousItemText()
+Get the previous item's text.
+
+### getCurrentItemText()
+Get the current item's text.  
+
+### getNextItemText()
+Get the next item's text.  
+
+### navigatePrevious()
+Navigate to previous item.  
+
+### navigateNext()
+Navigate to next item.  
+
+### doCurrentItemAction(int value)
+Call the action of the current item.
+
+### isCurrentItemHasSubMenu()
+Check wether the current Item has a sub menu.
+
+
 
 ---
 
